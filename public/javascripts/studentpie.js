@@ -83,34 +83,7 @@ function shuffle(a) {
 }
 
 function createPieCharts() {
-  createPie('.pieID--aecbranches' );
-  createPie('.pieID--acebranches' );
-  createPie('.pieID--acetbranches' );
-  createPie('.pieID--acoebranches' );
-  createPie('.pieID--aeccse' );
-  createPie('.pieID--aecece' );
-  createPie('.pieID--aeceee' );
-  createPie('.pieID--aecce' );
-  createPie('.pieID--aecme' );
-  createPie('.pieID--aecit' );
-  createPie('.pieID--aecage' );
-  createPie('.pieID--aecpt' );
-  createPie('.pieID--acetcse' );
-  createPie('.pieID--acetece' );
-  createPie('.pieID--aceteee' );
-  createPie('.pieID--acetce' );
-  createPie('.pieID--acetme' );
-  createPie('.pieID--acetit' );
-  createPie('.pieID--acetmca' );
-  createPie('.pieID--acetpt' );
-  createPie('.pieID--acoecse' );
-  createPie('.pieID--acoeece' );
-  createPie('.pieID--acoeeee' );
-  createPie('.pieID--acoece' );
-  createPie('.pieID--acoeme' );
-  createPie('.pieID--acoeit' );
-  createPie('.pieID--acoemca' );
-  createPie('.pieID--acoept' );
+  createPie('.pieID--student' );
 }
 
 createPieCharts();

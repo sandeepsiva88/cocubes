@@ -300,7 +300,7 @@ router.get('/colleges', function(req, res) {
 router.get('/aec', function(req, res) {
   //ENGLISH
   collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,ae){
-  console.log(ae);
+  //console.log(ae);
   //AEC
   //CSE
   var aeccseeng = Math.round((ae[12].total)/(ae[12].count));
@@ -845,32 +845,14 @@ router.get('/login', function(req, res) {
 router.post('/getdetails', function(req,res){
   var rollno = req.body.num;
   collection1.find({"RollNo":rollno}, function(err,docs){
-    //console.log(docs);
+    console.log(docs);
     res.send(docs);
   })
 });
 router.post('/getgraph', function(req,res){
   var rollno = req.body.num;
-  //console.log(rollno+'getgraph');
   collection1.find({"RollNumber":rollno}, function(err,docs1){
-    // var score = docs1[0].Score;
-    // var aptitude = docs1[0].Aptitude;
-    // var english = docs1[0].English;
-    // var quantitative = docs1[0].Quantitative;
-    // var analytical = docs1[0].Analytical;
-    // var domain = docs1[0].Domain;
-    // var computer = docs1[0].ComputerFundamentals;
-    // var coding = docs1[0].Coding;
-    // var written = docs1[0].WrittenEnglish;
-    // res.locals.score=score;
-    // res.locals.aptitude=aptitude;
-    // res.locals.english=english;
-    // res.locals.quantitative=quantitative;
-    // res.locals.analytical=analytical;
-    // res.locals.domain=domain;
-    // res.locals.computer=computer;
-    // res.locals.coding=coding;
-    // res.locals.written=written;
+    //console.log(docs1);
     res.send(docs1);
 });
 });

@@ -1,0 +1,171 @@
+doctype html
+html
+  title Cocubes
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // Bootstrap core CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
+    link(href='stylesheets/collegespie.css', rel='stylesheet')
+    script(src='javascripts/collegespie.js')
+    link(href='https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css', rel='stylesheet')
+    link(href='https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css', rel='stylesheet')
+    link(href='stylesheets/style.css', rel='stylesheet')
+    link(href='stylesheets/style1.css', rel='stylesheet')
+    link(href='stylesheets/graph.css', rel='stylesheet')
+    link(href='stylesheets/font-awesome/css/font-awesome.min.css', rel='stylesheet')
+    //- //if lt IE 9
+    //- script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    //- script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    style.
+
+      .tab {
+          overflow: hidden;
+          border: 1px solid #ccc;
+          background-color: #B83E44;
+          color:white;
+      }
+      .click{
+      display:none;
+      }
+
+      .tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          width:100%;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 17px;
+          border-left:1px solid #ccc;
+      }
+      .tab button:hover {
+          background-color: white;
+          color:#B83E44;
+          font-weight:bold;
+      }
+      .tab button:focus {
+          background-color: white;
+          color:#B83E44;
+          font-weight:bold;
+      }
+
+      .tab .active button {
+          background-color: white;
+          color:#B83E44;
+          font-weight:bold;
+      }
+      .logout{
+      border: 1px solid;
+      text-align:center;
+      background-color: maroon;
+      color:white;
+      font-size:18px;
+      }
+      .button1 {
+      background-color: maroon;
+      border: none;
+      color: white;
+      float:right;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      }
+      .verticalnav{
+      float:left;
+      color: white;
+      padding:2px 8px 10px;
+      font-size: 100%;
+      font-weight: bold;
+      }
+
+     .verticalnav a:hover {
+      color: black;
+      }
+
+  body
+    .wrapper
+      h1 3 colleges Department Wise Comparision
+      row
+        .col-md-4
+          .pie-charts
+
+            .pieID--aecbranches.pie-chart--wrapper
+              h2 AEC
+              .pie-chart
+                .pie-chart__pie
+                ul.pie-chart__legend
+                  li
+                    em CSE
+                    span #{aeccse}
+                  li
+                    em IT
+                    span #{aecit}
+                  li
+                    em ECE
+                    span #{aecece}
+                  li
+                    em EEE
+                    span #{aeceee}
+                  li
+                    em CIVIL
+                    span #{aeccivil}
+                  li
+                    em MECH
+                    span #{aecmech}
+                  li
+                    em PT
+                    span #{aecpt}
+        .col-md-4
+          .pieID--acetbranches.pie-chart--wrapper
+            h2 ACET
+            .pie-chart
+              .pie-chart__pie
+              ul.pie-chart__legend
+                li
+                  em CSE
+                  span #{acetcse}
+                li
+                  em IT
+                  span #{acetit}
+                li
+                  em ECE
+                  span #{acetece}
+                li
+                  em EEE
+                  span #{aceteee}
+                li
+                  em CIVIL
+                  span #{acetcivil}
+                li
+                  em MECH
+                  span #{acetmech}
+
+        .col-md-4
+          .pieID--acoebranches.pie-chart--wrapper
+            h2 ACOE
+            .pie-chart
+              .pie-chart__pie
+              ul.pie-chart__legend
+                li
+                  em CSE
+                  span #{acoecse}
+                li
+                  em ECE
+                  span #{acoeece}
+                li
+                  em EEE
+                  span #{acoeeee}
+                li
+                  em CIVIL
+                  span #{acoecivil}
+                li
+                  em MECH
+                  span #{acoemech}
+                li
+                  em PT
+                  span #{acoept}

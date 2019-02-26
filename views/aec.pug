@@ -1,0 +1,292 @@
+doctype html
+html
+  title Cocubes
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // Bootstrap core CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
+    link(href='stylesheets/aecpie.css', rel='stylesheet')
+    script(src='javascripts/aecpie.js')
+    link(href='https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css', rel='stylesheet')
+    link(href='https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css', rel='stylesheet')
+    link(href='stylesheets/style.css', rel='stylesheet')
+    link(href='stylesheets/style1.css', rel='stylesheet')
+    link(href='stylesheets/graph.css', rel='stylesheet')
+    link(href='stylesheets/font-awesome/css/font-awesome.min.css', rel='stylesheet')
+    //- //if lt IE 9
+    //- script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    //- script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    style.
+
+      .tab {
+          overflow: hidden;
+          border: 1px solid #ccc;
+          background-color: #B83E44;
+          color:white;
+      }
+      .click{
+      display:none;
+      }
+
+      .tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          width:100%;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 17px;
+          border-left:1px solid #ccc;
+      }
+      .tab button:hover {
+          background-color: white;
+          color:#B83E44;
+          font-weight:bold;
+      }
+      .tab button:focus {
+          background-color: white;
+          color:#B83E44;
+          font-weight:bold;
+      }
+
+      .tab .active button {
+          background-color: white;
+          color:#B83E44;
+          font-weight:bold;
+      }
+      .logout{
+      border: 1px solid;
+      text-align:center;
+      background-color: maroon;
+      color:white;
+      font-size:18px;
+      }
+      .button1 {
+      background-color: maroon;
+      border: none;
+      color: white;
+      float:right;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      }
+      .verticalnav{
+      float:left;
+      color: white;
+      padding:2px 8px 10px;
+      font-size: 100%;
+      font-weight: bold;
+      }
+
+     .verticalnav a:hover {
+      color: black;
+      }
+
+  body
+    .wrapper
+      h1 AEC Department Wise Comparision
+      row
+        .col-md-3
+          .pie-charts
+            .pieID--aeccse.pie-chart--wrapper
+              h2 CSE
+              .pie-chart
+                .pie-chart__pie
+                ul.pie-chart__legend
+                  li
+                    em English
+                    span #{aeccseeng}
+                  li
+                    em Quantitative
+                    span #{aeccsequant}
+                  li
+                    em Analytical
+                    span #{aeccseanaly}
+                  li
+                    em Domain
+                    span #{aeccsedomain}
+                  li
+                    em Computer fundamentals
+                    span #{aeccsecompf}
+                  li
+                    em Coding
+                    span #{aeccsecod}
+                  li
+                    em Written English
+                    span #{aeccsewet}
+
+        .col-md-3
+          .pieID--aecece.pie-chart--wrapper
+            h2 ECE
+            .pie-chart
+              .pie-chart__pie
+              ul.pie-chart__legend
+                li
+                  em English
+                  span #{aececeeng}
+                li
+                  em Quantitative
+                  span #{aececequant}
+                li
+                  em Analytical
+                  span #{aececeanaly}
+                li
+                  em Domain
+                  span #{aececedomain}
+                li
+                  em Computer fundamentals
+                  span #{aecececompf}
+                li
+                  em Coding
+                  span #{aecececod}
+                li
+                  em Written English
+                  span #{aececewet}
+
+        .col-md-3
+          .pieID--aeceee.pie-chart--wrapper
+            h2 EEE
+            .pie-chart
+              .pie-chart__pie
+              ul.pie-chart__legend
+                li
+                  em English
+                  span #{aeceeeeng}
+                li
+                  em Quantitative
+                  span #{aeceeequant}
+                li
+                  em Analytical
+                  span #{aeceeeanaly}
+                li
+                  em Domain
+                  span #{aeceeedomain}
+                li
+                  em Computer Fundamentals
+                  span #{aeceeecompf}
+                li
+                  em Coding
+                  span #{aeceeecod}
+                li
+                  em Written English
+                  span #{aeceeewet}
+
+        .col-md-3
+          .pieID--aecce.pie-chart--wrapper
+            h2 CE
+            .pie-chart
+              .pie-chart__pie
+              ul.pie-chart__legend
+                li
+                  em English
+                  span #{aeccivileng}
+                li
+                  em Quantitative
+                  span #{aeccivilquant}
+                li
+                  em Analytical
+                  span #{aeccivilanaly}
+                li
+                  em Domain
+                  span #{aeccivildomain}
+                li
+                  em Computer Fundamentals
+                  span #{aeccivilcompf}
+                li
+                  em Coding
+                  span #{aeccivilcod}
+                li
+                  em Written English
+                  span #{aeccivilwet}
+
+      row
+        .col-md-3
+          .pie-charts
+
+            .pieID--aecit.pie-chart--wrapper
+              h2 IT
+              .pie-chart
+                .pie-chart__pie
+                ul.pie-chart__legend
+                  li
+                    em English
+                    span #{aeciteng}
+                  li
+                    em Quantitative
+                    span #{aecitquant}
+                  li
+                    em Analytical
+                    span #{aecitanaly}
+                  li
+                    em Domain
+                    span #{aecitdomain}
+                  li
+                    em Computer Fundamentals
+                    span #{aecitcompf}
+                  li
+                    em Coding
+                    span #{aecitcod}
+                  li
+                    em Written English
+                    span #{aecitwet}
+
+        .col-md-3
+          .pieID--aecme.pie-chart--wrapper
+            h2 ME
+            .pie-chart
+              .pie-chart__pie
+              ul.pie-chart__legend
+                li
+                  em English
+                  span #{aecmecheng}
+                li
+                  em Quantitative
+                  span #{aecmechquant}
+                li
+                  em Analytical
+                  span #{aecmechanaly}
+                li
+                  em Domain
+                  span #{aecmechdomain}
+                li
+                  em Computer Fundamentals
+                  span #{aecmechcompf}
+                li
+                  em Coding
+                  span #{aecmechcod}
+                li
+                  em Written English
+                  span #{aecmechwet}
+
+        .col-md-3
+          .pieID--aecpt.pie-chart--wrapper
+            h2 PT
+            .pie-chart
+              .pie-chart__pie
+              ul.pie-chart__legend
+                li
+                  em English
+                  span #{aecpteng}
+                li
+                  em Quantitative
+                  span #{aecptquant}
+                li
+                  em Analytical
+                  span #{aecptanaly}
+                li
+                  em Domain
+                  span #{aecptdomain}
+                li
+                  em Computer Fundamentals
+                  span #{aecptcompf}
+                li
+                  em Coding
+                  span #{aecptcod}
+                li
+                  em Written English
+                  span #{aecptwet}

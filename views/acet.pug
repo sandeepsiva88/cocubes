@@ -1,0 +1,298 @@
+doctype html
+html
+  title Cocubes
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // Bootstrap core CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
+    link(href='stylesheets/acetpie.css', rel='stylesheet')
+    script(src='javascripts/acetpie.js')
+    link(href='https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css', rel='stylesheet')
+    link(href='https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css', rel='stylesheet')
+    link(href='stylesheets/style.css', rel='stylesheet')
+    link(href='stylesheets/style1.css', rel='stylesheet')
+    link(href='stylesheets/graph.css', rel='stylesheet')
+    link(href='stylesheets/font-awesome/css/font-awesome.min.css', rel='stylesheet')
+    //- //if lt IE 9
+    //- script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    //- script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    style.
+
+      .tab {
+          overflow: hidden;
+          border: 1px solid #ccc;
+          background-color: #B83E44;
+          color:white;
+      }
+      .click{
+      display:none;
+      }
+
+      .tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          width:100%;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 17px;
+          border-left:1px solid #ccc;
+      }
+      .tab button:hover {
+          background-color: white;
+          color:#B83E44;
+          font-weight:bold;
+      }
+      .tab button:focus {
+          background-color: white;
+          color:#B83E44;
+          font-weight:bold;
+      }
+
+      .tab .active button {
+          background-color: white;
+          color:#B83E44;
+          font-weight:bold;
+      }
+      .logout{
+      border: 1px solid;
+      text-align:center;
+      background-color: maroon;
+      color:white;
+      font-size:18px;
+      }
+      .button1 {
+      background-color: maroon;
+      border: none;
+      color: white;
+      float:right;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      }
+      .verticalnav{
+      float:left;
+      color: white;
+      padding:2px 8px 10px;
+      font-size: 100%;
+      font-weight: bold;
+      }
+
+     .verticalnav a:hover {
+      color: black;
+      }
+
+  body
+    .wrapper
+      h1 ACET Department Wise Comparision
+      row
+        .col-md-3
+          .pie-charts
+
+            .pieID--acetcse.pie-chart--wrapper
+              h2 CSE
+              .pie-chart
+                .pie-chart__pie
+                ul.pie-chart__legend
+
+                  li
+                    em English
+                    span #{acetcseeng}
+                  li
+                    em Quantitative
+                    span #{acetcsequant}
+                  li
+                    em Analytical
+                    span #{acetcseeng}
+                  li
+                    em Domain
+                    span #{acetcsedomain}
+                  li
+                    em Computer Fundamentals
+                    span #{acetcsecompf}
+                  li
+                    em Coding
+                    span #{acetcsecod}
+                  li
+                    em Written English
+                    span #{acetcsewet}
+
+        .col-md-3
+          .pieID--acetece.pie-chart--wrapper
+            h2 ECE
+            .pie-chart
+              .pie-chart__pie
+              ul.pie-chart__legend
+                li
+                  em English
+                  span #{aceteceeng}
+                li
+                  em Quantitative
+                  span #{acetecequant}
+                li
+                  em Analytical
+                  span #{aceteceanaly}
+                li
+                  em Domain
+                  span #{acetecedomain}
+                li
+                  em Computer Fundamentals
+                  span #{acetececompf}
+                li
+                  em Coding
+                  span #{acetececod}
+                li
+                  em Written English
+                  span #{acetecewet}
+
+        .col-md-3
+          .pieID--aceteee.pie-chart--wrapper
+            h2 EEE
+            .pie-chart
+              .pie-chart__pie
+              ul.pie-chart__legend
+                li
+                  em English
+                  span #{aceteeeeng}
+                li
+                  em Quantitative
+                  span #{aceteeequant}
+                li
+                  em Analytical
+                  span #{aceteeeanaly}
+                li
+                  em Domain
+                  span #{aceteeedomain}
+                li
+                  em Computer Fundamentals
+                  span #{aceteeecompf}
+                li
+                  em Coding
+                  span #{aceteeecod}
+                li
+                  em Written English
+                  span #{aceteeewet}
+
+        .col-md-3
+          .pieID--acetce.pie-chart--wrapper
+            h2 CE
+            .pie-chart
+              .pie-chart__pie
+              ul.pie-chart__legend
+                li
+                  em English
+                  span #{acetcivileng}
+                li
+                  em Quantitative
+                  span #{acetcivilquant}
+                li
+                  em Analytical
+                  span #{acetcivilanaly}
+                li
+                  em Domain
+                  span #{acetcivildomain}
+                li
+                  em Computer Fundamentals
+                  span #{acetcivilcompf}
+                li
+                  em Coding
+                  span #{acetcivilcod}
+                li
+                  em Written English
+                  span #{acetcivilwet}
+
+      row
+        .col-md-3
+          .pie-charts
+
+            .pieID--acetit.pie-chart--wrapper
+              h2 IT
+              .pie-chart
+                .pie-chart__pie
+                ul.pie-chart__legend
+
+                  li
+                    em English
+                    span #{acetiteng}
+                  li
+                    em Quantitative
+                    span #{acetitquant}
+                  li
+                    em Analytical
+                    span #{acetitanaly}
+                  li
+                    em Domain
+                    span #{acetitdomain}
+                  li
+                    em Computer Fundamentals
+                    span #{acetitcompf}
+                  li
+                    em Coding
+                    span #{acetitcod}
+                  li
+                    em Written English
+                    span #{acetitwet}
+
+
+
+
+        .col-md-3
+          .pieID--acetme.pie-chart--wrapper
+            h2 ME
+            .pie-chart
+              .pie-chart__pie
+              ul.pie-chart__legend
+                li
+                  em English
+                  span #{acetmecheng}
+                li
+                  em Quantitative
+                  span #{acetmechquant}
+                li
+                  em Analytical
+                  span #{acetmechanaly}
+                li
+                  em Domain
+                  span #{acetmechdomain}
+                li
+                  em Computer Fundamentals
+                  span #{acetmechcompf}
+                li
+                  em Coding
+                  span #{acetmechcod}
+                li
+                  em Written English
+                  span #{acetmechwet}
+
+        .col-md-3
+          .pieID--acetpt.pie-chart--wrapper
+            h2 PT
+            .pie-chart
+              .pie-chart__pie
+              ul.pie-chart__legend
+                li
+                  em English
+                  span #{acetpteng}
+                li
+                  em Quantitative
+                  span #{acetptquant}
+                li
+                  em Analytical
+                  span #{acetptanaly}
+                li
+                  em Domain
+                  span #{acetptdomain}
+                li
+                  em Computer Fundamentals
+                  span #{acetptcompf}
+                li
+                  em Coding
+                  span #{acetptcod}
+                li
+                  em Written English
+                  span #{acetptwet}

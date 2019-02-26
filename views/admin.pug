@@ -1,0 +1,100 @@
+doctype html
+html
+  head(lang='en')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    meta(name='viewport', content='width=device-width,initial-scale=1.0')
+    link(href='favicon.ico', rel='icon', type='image/icon')
+    title Cocubes Data Analysis
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    link(href='https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css', rel='stylesheet')
+    link(href='https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css', rel='stylesheet')
+    link(href='stylesheets/style.css', rel='stylesheet')
+    link(href='stylesheets/style1.css', rel='stylesheet')
+    link(href='stylesheets/graph.css', rel='stylesheet')
+    link(href='stylesheets/font-awesome/css/font-awesome.min.css', rel='stylesheet')
+    //- //if lt IE 9
+    //- script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    //- script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    style.
+
+      .tab {
+          overflow: hidden;
+          border: 1px solid #ccc;
+          background-color: #B83E44;
+          color:white;
+      }
+      .click{
+      display:none;
+      }
+
+      .tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          width:100%;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 17px;
+          border-left:1px solid #ccc;
+      }
+      .tab button:hover {
+          background-color: white;
+          color:#B83E44;
+          font-weight:bold;
+      }
+      .tab button:focus {
+          background-color: white;
+          color:#B83E44;
+          font-weight:bold;
+      }
+
+      .tab .active button {
+          background-color: white;
+          color:#B83E44;
+          font-weight:bold;
+      }
+      .logout{
+      border: 1px solid;
+      text-align:center;
+      background-color: maroon;
+      color:white;
+      font-size:18px;
+      }
+      .button1 {
+      background-color: maroon;
+      border: none;
+      color: white;
+      float:right;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      }
+      .verticalnav{
+      float:left;
+      color: white;
+      padding:2px 8px 10px;
+      font-size: 100%;
+      font-weight: bold;
+      }
+
+     .verticalnav a:hover {
+      color: black;
+      }
+
+
+  body
+    center
+        form(method='post', action='/uploadxls', enctype='multipart/form-data')
+          img(src='images/modified.png', style='width:10%; align:left')
+          br
+          br
+          input.form-control(type='file', name='file' style='width:50%')
+          br
+          input.btn.btn-info(type='submit', value='submit')
+                

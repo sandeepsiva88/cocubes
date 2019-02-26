@@ -1,0 +1,336 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // Bootstrap core CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
+    link(href='stylesheets/bpie.css', rel='stylesheet')
+    script(src='javascripts/bpie.js')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    style.
+      body {font-family: Arial;}
+      /* Style the tab */
+      .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+      }
+      /* Style the buttons inside the tab */
+      .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+      }
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+      background-color: #ddd;
+      }
+      /* Create an active/current tablink class */
+      .tab button.active {
+      background-color: #ccc;
+      }
+      /* Style the tab content */
+      .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+      }
+  body
+    form(action='/strongg', method='get')
+      | Tabs
+      p Click on the buttons inside the tabbed menu:
+      .tab
+        button.tablinks(onclick="openCity(event, 'London')") London
+        button.tablinks(onclick="openCity(event, 'Paris')") Paris
+        button.tablinks(onclick="openCity(event, 'Tokyo')") Tokyo
+      #London.tabcontent
+       .wrapper
+        h1 Strong Category
+          row
+            .col-md-3
+              .pie-charts    
+
+                .pieID--micro-skills.pie-chart--wrapper
+                  h2 CSE
+                  .pie-chart
+                    .pie-chart__pie
+                    ul.pie-chart__legend
+                      li
+                        em Aptitude
+                        span 642
+                      li
+                        em English
+                        span 358
+                      li
+                        em Quantitative
+                        span 358
+                      li
+                        em Analytical
+                        span 358
+                      li
+                        em Domain
+                        span 358
+                      li
+                        em Computer Fundamentals
+                        span 358
+                      li
+                        em Coding
+                        span 358
+                      li
+                        em Written English
+                        span 358    
+    
+    
+    
+
+            .col-md-3
+              .pieID--categories.pie-chart--wrapper
+                h2 ECE
+                .pie-chart
+                  .pie-chart__pie
+                  ul.pie-chart__legend
+                    li
+                      em Aptitude
+                      span 642
+                    li
+                      em English
+                      span 358
+                    li
+                      em Quantitative
+                      span 358
+                    li
+                      em Analytical
+                      span 358
+                    li
+                      em Domain
+                      span 358
+                    li
+                      em Computer Fundamentals
+                      span 358
+                    li
+                      em Coding
+                      span 358
+                    li
+                      em Written English
+                      span 358    
+
+            .col-md-3
+              .pieID--operations.pie-chart--wrapper
+                h2 EEE
+                .pie-chart
+                  .pie-chart__pie
+                  ul.pie-chart__legend
+                    li
+                      em Aptitude
+                      span 642
+                    li
+                      em English
+                      span 358
+                    li
+                      em Quantitative
+                      span 358
+                    li
+                      em Analytical
+                      span 358
+                    li
+                      em Domain
+                      span 358
+                    li
+                      em Computer Fundamentals
+                      span 358
+                    li
+                      em Coding
+                      span 358
+                    li
+                      em Written English
+                      span 358    
+
+            .col-md-3
+              .pieID--operations.pie-chart--wrapper
+                h2 CE
+                .pie-chart
+                  .pie-chart__pie
+                  ul.pie-chart__legend
+                    li
+                      em Aptitude
+                      span 642
+                    li
+                      em English
+                      span 358
+                    li
+                      em Quantitative
+                      span 358
+                    li
+                      em Analytical
+                      span 358
+                    li
+                      em Domain
+                      span 358
+                    li
+                      em Computer Fundamentals
+                      span 358
+                    li
+                      em Coding
+                      span 358
+                    li
+                      em Written English
+                      span 358    
+
+          row
+            .col-md-3
+              .pie-charts    
+
+                .pieID--micro-skills.pie-chart--wrapper
+                  h2 IT
+                  .pie-chart
+                    .pie-chart__pie
+                    ul.pie-chart__legend
+                      li
+                        em Aptitude
+                        span 642
+                      li
+                        em English
+                        span 358
+                      li
+                        em Quantitative
+                        span 358
+                      li
+                        em Analytical
+                        span 358
+                      li
+                        em Domain
+                        span 358
+                      li
+                        em Computer Fundamentals
+                        span 358
+                      li
+                        em Coding
+                        span 358
+                      li
+                        em Written English
+                        span 358    
+    
+    
+    
+
+            .col-md-3
+              .pieID--categories.pie-chart--wrapper
+                h2 ME
+                .pie-chart
+                  .pie-chart__pie
+                  ul.pie-chart__legend
+                    li
+                      em Aptitude
+                      span 642
+                    li
+                      em English
+                      span 358
+                    li
+                      em Quantitative
+                      span 358
+                    li
+                      em Analytical
+                      span 358
+                    li
+                      em Domain
+                      span 358
+                    li
+                      em Computer Fundamentals
+                      span 358
+                    li
+                      em Coding
+                      span 358
+                    li
+                      em Written English
+                      span 358    
+
+            .col-md-3
+              .pieID--operations.pie-chart--wrapper
+                h2 PT
+                .pie-chart
+                  .pie-chart__pie
+                  ul.pie-chart__legend
+                    li
+                      em Aptitude
+                      span 642
+                    li
+                      em English
+                      span 358
+                    li
+                      em Quantitative
+                      span 358
+                    li
+                      em Analytical
+                      span 358
+                    li
+                      em Domain
+                      span 358
+                    li
+                      em Computer Fundamentals
+                      span 358
+                    li
+                      em Coding
+                      span 358
+                    li
+                      em Written English
+                      span 358    
+
+            .col-md-3
+              .pieID--operations.pie-chart--wrapper
+                h2 MCA
+                .pie-chart
+                  .pie-chart__pie
+                  ul.pie-chart__legend
+                    li
+                      em Aptitude
+                      span 642
+                    li
+                      em English
+                      span 358
+                    li
+                      em Quantitative
+                      span 358
+                    li
+                      em Analytical
+                      span 358
+                    li
+                      em Domain
+                      span 358
+                    li
+                      em Computer Fundamentals
+                      span 358
+                    li
+                      em Coding
+                      span 358
+                    li
+                      em Written English
+                      span 358
+      #Paris.tabcontent
+        h3 Paris
+        p Paris is the capital of France.
+      #Tokyo.tabcontent
+        h3 Tokyo
+        p Tokyo is the capital of Japan.
+      script.
+        function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+        }

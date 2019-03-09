@@ -1,46 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@keyframes bake-pie {
+  from {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
 body {
   font-family: "Open Sans", Arial;
   background: #EEE;
-  text-align: center;
-}
-body * {
-  font-weight: 300;
-  margin: 0;
-  padding: 0;
 }
 
-@-webkit-keyframes bake-pie {
-  from {
-    -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
-            transform: rotate(0deg) translate3d(0, 0, 0);
-  }
-}
-
-@keyframes bake-pie {
-  from {
-    -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
-            transform: rotate(0deg) translate3d(0, 0, 0);
-  }
-}
-.pie-chart {
-  font-family: "Open Sans", Arial;
-}
-.pie-chart--wrapper {
+main {
   width: 400px;
   margin: 30px auto;
-  text-align: center;
 }
-.pie-chart__pie, .pie-chart__legend {
+
+section {
+  margin-top: 30px;
+}
+
+.pieID {
   display: inline-block;
   vertical-align: top;
 }
-.pie-chart__pie {
-  position: relative;
+
+.pie {
   height: 200px;
   width: 200px;
-  margin: 10px auto 35px;
+  position: relative;
+  margin: 0 30px 30px 0;
 }
-.pie-chart__pie::before {
+
+.pie::before {
   content: "";
   display: block;
   position: absolute;
@@ -52,7 +42,8 @@ body * {
   top: 50px;
   left: 50px;
 }
-.pie-chart__pie::after {
+
+.pie::after {
   content: "";
   display: block;
   width: 120px;
@@ -68,9 +59,9 @@ body * {
   width: 200px;
   height: 200px;
   clip: rect(0px, 200px, 200px, 100px);
-  -webkit-animation: bake-pie 1s;
-          animation: bake-pie 1s;
+  animation: bake-pie 1s;
 }
+
 .slice span {
   display: block;
   position: absolute;
@@ -83,37 +74,38 @@ body * {
   clip: rect(0px, 200px, 200px, 100px);
 }
 
-.pie-chart__legend {
-  display: block;
+.legend {
   list-style-type: none;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
   background: #FFF;
-  padding: 0.75em 0.75em 0.05em;
+  padding: 15px;
   font-size: 13px;
   box-shadow: 1px 1px 0 #DDD, 2px 2px 0 #BBB;
-  text-align: left;
-  width: 65%;
 }
-.pie-chart__legend li {
+
+.legend li {
+  width: 110px;
   height: 1.25em;
   margin-bottom: 0.7em;
   padding-left: 0.5em;
   border-left: 1.25em solid black;
 }
-.pie-chart__legend em {
+
+.legend em {
   font-style: normal;
 }
-.pie-chart__legend span {
+
+.legend span {
   float: right;
 }
 
-.pie-charts {
-  display: flex;
-  flex-direction: row;
-}
-@media (max-width: 500px) {
-  .pie-charts {
-    flex-direction: column;
-  }
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 13px;
+  background: #DDD;
+  padding: 5px 10px;
+  margin: 5px;
 }

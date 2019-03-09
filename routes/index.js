@@ -237,7 +237,7 @@ router.get('/colleges', function(req, res) {
   //MECH
   var aecmech = Math.round((acse[17].total)/(acse[17].count));
   //PT
-  var aecpt = Math.round((acse[19].total)/(acse[19].count));
+  var aecpt = Math.round((acse[18].total)/(acse[18].count));
 
   //ACET
   //CSE
@@ -300,136 +300,135 @@ router.get('/colleges', function(req, res) {
 router.get('/aec', function(req, res) {
   //ENGLISH
   collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,ae){
-  //console.log(ae);
+  console.log(ae);
   //AEC
+  //IT
+  var aeciteng = Math.round((ae[18].total)/(ae[18].count));
+
   //CSE
-  var aeccseeng = Math.round((ae[12].total)/(ae[12].count));
+  var aeccseeng = Math.round((ae[14].total)/(ae[14].count));
   //ECE
-  var aececeeng = Math.round((ae[8].total)/(ae[8].count));
+  var aececeeng = Math.round((ae[15].total)/(ae[15].count));
   //EEE
-  var aeceeeeng = Math.round((ae[9].total)/(ae[9].count));
+  var aeceeeeng = Math.round((ae[16].total)/(ae[16].count));
   //CIVIL
-  var aeccivileng = Math.round((ae[6].total)/(ae[6].count));
+  var aeccivileng = Math.round((ae[13].total)/(ae[13].count));
   //MECH
-  var aecmecheng = Math.round((ae[10].total)/(ae[10].count));
+  var aecmecheng = Math.round((ae[18].total)/(ae[18].count));
   //PT
-  var aecpteng = Math.round((ae[11].total)/(ae[11].count));
+  var aecpteng = Math.round((ae[20].total)/(ae[20].count));
   //AGRI
-  var aecagrieng = Math.round((ae[11].total)/(ae[11].count));
+  var aecagrieng = Math.round((ae[12].total)/(ae[12].count));
   //MIN
-  var aecmineng = Math.round((ae[11].total)/(ae[11].count));
+  var aecmineng = Math.round((ae[19].total)/(ae[19].count));
   //QUANTITATIVE  
   collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$Quantitative"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,aq){
-  //console.log(aq);
+  console.log(aq);
   //AEC
+  //IT
+  var aecitquant = Math.round((aq[18].total)/(aq[18].count));
+
   //CSE
-  var aeccsequant= Math.round((aq[7].total)/(aq[7].count));
+  var aeccsequant= Math.round((aq[14].total)/(aq[14].count));
   //ECE
-  var aececequant = Math.round((aq[8].total)/(aq[8].count));
+  var aececequant = Math.round((aq[15].total)/(aq[15].count));
   //EEE
-  var aeceeequant = Math.round((aq[9].total)/(aq[9].count));
+  var aeceeequant = Math.round((aq[16].total)/(aq[16].count));
   //CIVIL
-  var aeccivilquant = Math.round((aq[6].total)/(aq[6].count));
+  var aeccivilquant = Math.round((aq[13].total)/(aq[13].count));
   //MECH
-  var aecmechquant = Math.round((aq[10].total)/(aq[10].count));
+  var aecmechquant = Math.round((aq[18].total)/(aq[18].count));
   //PT
-  var aecptquant = Math.round((aq[11].total)/(aq[11].count));
+  var aecptquant = Math.round((aq[20].total)/(aq[20].count));
   //ANALYTICAL
   collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$Analytical"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,aa){
   //console.log(aa);
   //AEC
+  //IT
+  var aecitanaly = Math.round((aa[18].total)/(aa[18].count));
+
   //CSE
-  var aeccseanaly = Math.round((aa[7].total)/(aa[7].count));
+  var aeccseanaly = Math.round((aa[14].total)/(aa[14].count));
   //ECE
-  var aececeanaly = Math.round((aa[8].total)/(aa[8].count));
+  var aececeanaly = Math.round((aa[15].total)/(aa[15].count));
   //EEE
-  var aeceeeanaly = Math.round((aa[9].total)/(aa[9].count));
+  var aeceeeanaly = Math.round((aa[16].total)/(aa[16].count));
   //CIVIL
-  var aeccivilanaly = Math.round((aa[6].total)/(aa[6].count));
+  var aeccivilanaly = Math.round((aa[13].total)/(aa[13].count));
   //MECH
-  var aecmechanaly = Math.round((aa[10].total)/(aa[10].count));
+  var aecmechanaly = Math.round((aa[18].total)/(aa[18].count));
   //PT
-  var aecptanaly = Math.round((aa[11].total)/(aa[11].count));
+  var aecptanaly = Math.round((aa[20].total)/(aa[20].count));
   //DOMAIN
-  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,ad){
+  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$Domain"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,ad){
   //console.log(ad);
   //AEC
+  //IT
+  var aecitdomain = Math.round((ad[18].total)/(ad[18].count));
+
   //CSE
-  var aeccsedomain = Math.round((ad[12].total)/(ad[12].count));
+  var aeccsedomain = Math.round((ad[14].total)/(ad[14].count));
   //ECE
-  var aececedomain = Math.round((ad[8].total)/(ad[8].count));
+  var aececedomain = Math.round((ad[15].total)/(ad[15].count));
   //EEE
-  var aeceeedomain = Math.round((ad[9].total)/(ad[9].count));
+  var aeceeedomain = Math.round((ad[16].total)/(ad[16].count));
   //CIVIL
-  var aeccivildomain = Math.round((ad[6].total)/(ad[6].count));
+  var aeccivildomain = Math.round((ad[13].total)/(ad[13].count));
   //MECH
-  var aecmechdomain = Math.round((ad[10].total)/(ad[10].count));
+  var aecmechdomain = Math.round((ad[18].total)/(ad[18].count));
   //PT
-  var aecptdomain = Math.round((ad[11].total)/(ad[11].count));
+  var aecptdomain = Math.round((ad[20].total)/(ad[20].count));
   //AGRI
-  var aecagridomain = Math.round((ad[11].total)/(ad[11].count));
+  var aecagridomain = Math.round((ad[12].total)/(ad[12].count));
   //MIN
-  var aecmindomain = Math.round((ad[11].total)/(ad[11].count));
-  //COMPUTER FUNDAMENTALS
-  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,acf){
-  //console.log(acf);
-  //AEC
-  //CSE
-  var aeccsecompf = Math.round((acf[12].total)/(acf[12].count));
-  //ECE
-  var aecececompf = Math.round((acf[8].total)/(acf[8].count));
-  //EEE
-  var aeceeecompf = Math.round((acf[9].total)/(acf[9].count));
-  //CIVIL
-  var aeccivilcompf = Math.round((acf[6].total)/(acf[6].count));
-  //MECH
-  var aecmechcompf = Math.round((acf[10].total)/(acf[10].count));
-  //PT
-  var aecptcompf = Math.round((acf[11].total)/(acf[11].count));
-  //AGRI
-  var aecagricompf = Math.round((acf[11].total)/(acf[11].count));
-  //MIN
-  var aecmincompf = Math.round((acf[11].total)/(acf[11].count));
+  var aecmindomain = Math.round((ad[19].total)/(ad[19].count));
+  
   //CODING
-  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,ac){
+  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$Coding"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,ac){
   //console.log(ac);
   //AEC
+  //IT
+  var aecitcod = Math.round((ac[18].total)/(ac[18].count));
+
   //CSE
-  var aeccsecod = Math.round((ac[12].total)/(ac[12].count));
+  var aeccsecod = Math.round((ac[14].total)/(ac[14].count));
   //ECE
-  var aecececod = Math.round((ac[8].total)/(ac[8].count));
+  var aecececod = Math.round((ac[15].total)/(ac[15].count));
   //EEE
-  var aeceeecod = Math.round((ac[9].total)/(ac[9].count));
+  var aeceeecod = Math.round((ac[16].total)/(ac[16].count));
   //CIVIL
-  var aeccivilcod = Math.round((ac[6].total)/(ac[6].count));
+  var aeccivilcod = Math.round((ac[13].total)/(ac[13].count));
   //MECH
-  var aecmechcod = Math.round((ac[10].total)/(ac[10].count));
+  var aecmechcod = Math.round((ac[18].total)/(ac[18].count));
   //PT
-  var aecptcod = Math.round((ac[11].total)/(ac[11].count));
+  var aecptcod = Math.round((ac[20].total)/(ac[20].count));
   //AGRI
-  var aecagricod = Math.round((ac[11].total)/(ac[11].count));
+  var aecagricod = Math.round((ac[12].total)/(ac[12].count));
   //MIN
-  var aecmincod = Math.round((ac[11].total)/(ac[11].count));
+  var aecmincod = Math.round((ac[19].total)/(ac[19].count));
   //WRITTEN ENGLISH
-  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,aw){
+  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$WrittenEnglish"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,aw){
   //console.log(aw);
   //AEC
+  //IT
+  var aecitwet = Math.round((aw[18].total)/(aw[18].count));
+
   //CSE
-  var aeccsewet = Math.round((aw[12].total)/(aw[12].count));
+  var aeccsewet = Math.round((aw[14].total)/(aw[14].count));
   //ECE
-  var aececewet = Math.round((aw[8].total)/(aw[8].count));
+  var aececewet = Math.round((aw[15].total)/(aw[15].count));
   //EEE
-  var aeceeewet = Math.round((aw[9].total)/(aw[9].count));
+  var aeceeewet = Math.round((aw[16].total)/(aw[16].count));
   //CIVIL
-  var aeccivilwet = Math.round((aw[6].total)/(aw[6].count));
+  var aeccivilwet = Math.round((aw[13].total)/(aw[13].count));
   //MECH
-  var aecmechwet = Math.round((aw[10].total)/(aw[10].count));
+  var aecmechwet = Math.round((aw[18].total)/(aw[18].count));
   //PT
-  var aecptwet = Math.round((aw[11].total)/(aw[11].count));
+  var aecptwet = Math.round((aw[20].total)/(aw[20].count));
   //AGRI
-  var aecagriwet = Math.round((aw[11].total)/(aw[11].count));
+  var aecagriwet = Math.round((aw[12].total)/(aw[12].count));
   //MIN
-  var aecminwet = Math.round((aw[11].total)/(aw[11].count));
+  var aecminwet = Math.round((aw[19].total)/(aw[19].count));
   
   res.locals.aeccseeng = aeccseeng;
   res.locals.aececeeng = aececeeng;
@@ -439,6 +438,7 @@ router.get('/aec', function(req, res) {
   res.locals.aecpteng = aecpteng;
   res.locals.aecagrieng = aecagrieng;
   res.locals.aecmineng = aecmineng;
+  res.locals.aeciteng = aeciteng;
   
   res.locals.aeccsequant = aeccsequant;
   res.locals.aececequant = aececequant;
@@ -446,6 +446,7 @@ router.get('/aec', function(req, res) {
   res.locals.aeccivilquant = aeccivilquant;
   res.locals.aecmechquant = aecmechquant;
   res.locals.aecptquant = aecptquant;
+  res.locals.aecitquant = aecitquant;
    
   res.locals.aeccseanaly = aeccseanaly;
   res.locals.aececeanaly = aececeanaly;
@@ -453,6 +454,7 @@ router.get('/aec', function(req, res) {
   res.locals.aeccivilanaly = aeccivilanaly;
   res.locals.aecmechanaly = aecmechanaly;
   res.locals.aecptanaly = aecptanaly;
+  res.locals.aecitanaly = aecitanaly;
   
   res.locals.aeccsedomain = aeccsedomain;
   res.locals.aececedomain = aececedomain;
@@ -460,15 +462,10 @@ router.get('/aec', function(req, res) {
   res.locals.aeccivildomain = aeccivildomain;
   res.locals.aecmechdomain = aecmechdomain;
   res.locals.aecptdomain = aecptdomain;
+  res.locals.aecitdomain = aecitdomain;
   
-  res.locals.aeccsecompf = aeccsecompf;
-  res.locals.aecececompf = aecececompf;
-  res.locals.aeceeecompf = aeceeecompf;
-  res.locals.aeccivilcompf = aeccivilcompf;
-  res.locals.aecmechcompf = aecmechcompf;
-  res.locals.aecptcompf = aecptcompf;
-  res.locals.aecagricompf = aecagricompf;
-  res.locals.aecmincompf = aecmincompf;
+
+
   
   res.locals.aeccsecod = aeccsecod;
   res.locals.aecececod = aecececod;
@@ -476,6 +473,7 @@ router.get('/aec', function(req, res) {
   res.locals.aeccivilcod = aeccivilcod;
   res.locals.aecmechcod = aecmechcod;
   res.locals.aecptcod = aecptcod;
+  res.locals.aecitcod = aecitcod;
   
   res.locals.aeccsewet = aeccsewet;
   res.locals.aececewet = aececewet;
@@ -483,9 +481,9 @@ router.get('/aec', function(req, res) {
   res.locals.aeccivilwet = aeccivilwet;
   res.locals.aecmechwet = aecmechwet;
   res.locals.aecptwet = aecptwet;
+  res.locals.aecitwet = aecitwet;
 
   res.render('aec');
-  });
   });
   });
   });
@@ -540,7 +538,7 @@ router.get('/acet', function(req, res) {
   //MECH
   var acetmechanaly = Math.round((aa[5].total)/(aa[5].count));
   //DOMAIN
-  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,ad){
+  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$Domain"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,ad){
   //console.log(ad);
   //ACET
   //CSE
@@ -555,24 +553,8 @@ router.get('/acet', function(req, res) {
   var acetcivildomain = Math.round((ad[0].total)/(ad[0].count));
   //MECH
   var acetmechdomain = Math.round((ad[5].total)/(ad[5].count));
-  //COMPUTER FUNDAMENTALS
-  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,acf){
-  //console.log(acf);
-  //ACET
-  //CSE
-  var acetcsecompf = Math.round((acf[1].total)/(acf[1].count));
-  //IT
-  var acetitcompf = Math.round((acf[4].total)/(acf[4].count));
-  //ECE
-  var acetececompf = Math.round((acf[2].total)/(acf[2].count));
-  //EEE
-  var aceteeecompf = Math.round((acf[3].total)/(acf[3].count));
-  //CIVIL
-  var acetcivilcompf = Math.round((acf[0].total)/(acf[0].count));
-  //MECH
-  var acetmechcompf = Math.round((acf[5].total)/(acf[5].count));
-  //CODING
-  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,ac){
+    //CODING
+  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$Coding"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,ac){
   //console.log(ac);
   //ACET
   //CSE
@@ -588,7 +570,7 @@ router.get('/acet', function(req, res) {
   //MECH
   var acetmechcod = Math.round((ac[5].total)/(ac[5].count));
   //WRITTEN ENGLISH
-  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,aw){
+  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$WrittenEnglish"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,aw){
   //console.log(aw);
   //ACET
   //CSE
@@ -603,14 +585,6 @@ router.get('/acet', function(req, res) {
   var acetcivilwet = Math.round((aw[0].total)/(aw[0].count));
   //MECH
   var acetmechwet = Math.round((aw[5].total)/(aw[5].count));
-
-  res.locals.aecit = aecit;
-  res.locals.acetcse = acetcse;
-  res.locals.acetit = acetit;
-  res.locals.acetece = acetece;
-  res.locals.aceteee = aceteee;
-  res.locals.acetcivil = acetcivil;
-  res.locals.acetmech = acetmech;
   
   res.locals.acetcseeng = acetcseeng;
   res.locals.acetiteng = acetiteng;
@@ -640,13 +614,6 @@ router.get('/acet', function(req, res) {
   res.locals.acetcivildomain = acetcivildomain;
   res.locals.acetmechdomain = acetmechdomain;
   
-  res.locals.acetcsecompf = acetcsecompf;
-  res.locals.acetitcompf = acetitcompf;
-  res.locals.acetececompf = acetececompf;
-  res.locals.aceteeecompf = aceteeecompf;
-  res.locals.acetcivilcompf = acetcivilcompf;
-  res.locals.acetmechcompf = acetmechcompf;
-  
   res.locals.acetcsecod = acetcsecod;
   res.locals.acetitcod = acetitcod;
   res.locals.acetececod = acetececod;
@@ -662,7 +629,6 @@ router.get('/acet', function(req, res) {
   res.locals.acetmechwet = acetmecheng;
   
   res.render('acet');
-  });
   });
   });
   });
@@ -706,7 +672,7 @@ router.get('/acoe', function(req, res) {
   var acoeptanaly = Math.round((aa[11].total)/(aa[11].count));
 
   //DOMAIN
-  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,ad){
+  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$Domain"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,ad){
   //console.log(ad);
   //ACOE
   //CSE
@@ -718,29 +684,29 @@ router.get('/acoe', function(req, res) {
   //CIVIL
   var acoecivildomain = Math.round((ad[6].total)/(ad[6].count));
   //MECH
-  var acoemechdomain = Math.round((ae[10].total)/(ad[10].count));
+  var acoemechdomain = Math.round((ad[10].total)/(ad[10].count));
   //PT
   var acoeptdomain = Math.round((ad[11].total)/(ad[11].count));
 
   //COMPUTER FUNDAMENTALS
-  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,acf){
-  //console.log(acf);
+  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,ae){
+  //console.log(ae);
   //ACOE
   //CSE
-  var acoecsecompf = Math.round((acf[7].total)/(acf[7].count));
+  var acoecseeng = Math.round((ae[7].total)/(ae[7].count));
   //ECE
-  var acoeececompf = Math.round((acf[8].total)/(acf[8].count));
+  var acoeeceeng = Math.round((ae[8].total)/(ae[8].count));
   //EEE
-  var acoeeeecompf = Math.round((acf[9].total)/(acf[9].count));
+  var acoeeeeeng = Math.round((ae[9].total)/(ae[9].count));
   //CIVIL
-  var acoecivilcompf = Math.round((acf[6].total)/(acf[6].count));
+  var acoecivileng = Math.round((ae[6].total)/(ae[6].count));
   //MECH
-  var acoemechcompf = Math.round((acf[10].total)/(acf[10].count));
+  var acoemecheng = Math.round((ae[10].total)/(ae[10].count));
   //PT
-  var acoeptcompf = Math.round((acf[11].total)/(acf[11].count));
+  var acoepteng = Math.round((ae[11].total)/(ae[11].count));
 
   //CODING
-  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,ac){
+  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$Coding"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,ac){
   //console.log(ac);
   //ACOE
   //CSE
@@ -757,7 +723,7 @@ router.get('/acoe', function(req, res) {
   var acoeptcod = Math.round((ac[11].total)/(ac[11].count));
 
   //WRITTEN ENGLISH
-  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,aw){
+  collection1.aggregate([{$group: {_id: {"Branch":"$Branch","College":"$College"}, count : {$sum : 1}, total: {$sum: "$WrittenEnglish"}}},{$sort:{"_id.College":1,"_id.Branch":1}}],function(err,aw){
   //console.log(aw);
   //ACOE
   //CSE
@@ -772,13 +738,6 @@ router.get('/acoe', function(req, res) {
   var acoemechwet = Math.round((aw[10].total)/(aw[10].count));
   //PT
   var acoeptwet = Math.round((aw[11].total)/(aw[11].count));
-
-  res.locals.acoecse = acoecse;
-  res.locals.acoeece = acoeece;
-  res.locals.acoeeee = acoeeee;
-  res.locals.acoecivil = acoecivil;
-  res.locals.acoemech = acoemech;
-  res.locals.acoept = acoept;
   
   res.locals.acoecseeng = acoecseeng;
   res.locals.acoeeceeng = acoeeceeng;
@@ -808,12 +767,12 @@ router.get('/acoe', function(req, res) {
   res.locals.acoemechdomain = acoemechdomain;
   res.locals.acoeptdomain = acoeptdomain;
   
-  res.locals.acoecsecompf = acoecsecompf;
-  res.locals.acoeececompf = acoeececompf;
-  res.locals.acoeeeecompf = acoeeeecompf;
-  res.locals.acoecivilcompf = acoecivilcompf;
-  res.locals.acoemechcompf = acoemechcompf;
-  res.locals.acoeptcompf = acoeptcompf;
+  //res.locals.acoecseeng = acoecseeng;
+  //res.locals.acoeeceeng = acoeeceeng;
+  //res.locals.acoeeeeeng = acoeeeeeng;
+  //res.locals.acoecivileng = acoecivileng;
+  //res.locals.acoemecheng = acoemecheng;
+  //res.locals.acoepteng = acoepteng;
   
   res.locals.acoecsecod = acoecsecod;
   res.locals.acoeececod = acoeececod;
@@ -842,21 +801,88 @@ router.get('/year', function(req, res) {
 router.get('/login', function(req, res) {
   res.render('login');
 });
+router.get('/sample', function(req, res) {
+  res.render('sample');
+});
 router.post('/getdetails', function(req,res){
   var rollno = req.body.num;
   collection1.find({"RollNo":rollno}, function(err,docs){
-    console.log(docs);
+    //console.log(docs);
     res.send(docs);
   })
 });
 router.post('/getgraph', function(req,res){
   var rollno = req.body.num;
+  //console.log(rollno+'getgraph');
   collection1.find({"RollNumber":rollno}, function(err,docs1){
-    //console.log(docs1);
     res.send(docs1);
 });
 });
-//admin panel
-
+router.get('/cy', function(req, res) {
+  collection1.aggregate([{$group: {_id: {"College":"$College", "Batch":"$Batch"}, count : {$sum : 1}, total: {$sum: "$Score"}}},{$sort:{"_id.College":1,"_id.Batch":1}}],function(err,docs){
+  //2017
+  var aec2017 = Math.round((docs[4].total)/(docs[4].count));
+  var acet2017 = Math.round((docs[0].total)/(docs[0].count));
+  var acoe2017 = Math.round((docs[2].total)/(docs[2].count));
+  //2018
+  var aec2018 = Math.round((docs[5].total)/(docs[5].count));
+  var acet2018 = Math.round((docs[1].total)/(docs[1].count));
+  var acoe2018 = Math.round((docs[3].total)/(docs[3].count));
+  // console.log(aec2017);
+  // console.log(aec2018);
+  // console.log(acet2017);
+  // console.log(acet2018);
+  // console.log(acoe2017);
+  // console.log(acoe2018);
+  res.locals.aec2017 = aec2017; 
+  res.locals.aec2018 = aec2018; 
+  res.locals.acet2017 = acet2017;
+  res.locals.acet2018 = acet2018;
+  res.locals.acoe2017 = acoe2017;
+  res.locals.acoe2018 = acoe2018;
+  res.render('yearwise');
+});
+});
+router.get('/my', function(req, res) {
+  //English
+  collection1.aggregate([{$group: {_id: {"College":"$College", "Batch":"$Batch"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Batch":1}}],function(err,eng){
+  console.log(eng);
+  //2017
+  var aeceng2017 = Math.round((eng[4].total)/(eng[4].count));
+  var aceteng2017 = Math.round((eng[0].total)/(eng[0].count));
+  var acoeeng2017 = Math.round((eng[2].total)/(eng[2].count));
+  //2018
+  var aeceng2018 = Math.round((eng[5].total)/(eng[5].count));
+  var aceteng2018 = Math.round((eng[1].total)/(eng[1].count));
+  var acoeeng2018 = Math.round((eng[3].total)/(eng[3].count));
+  //Quantitative
+  collection1.aggregate([{$group: {_id: {"College":"$College", "Batch":"$Batch"}, count : {$sum : 1}, total: {$sum: "$Quantitative"}}},{$sort:{"_id.College":1,"_id.Batch":1}}],function(err,qua){
+  console.log(qua);
+  //2017
+  var aecqua2017 = Math.round((qua[4].total)/(qua[4].count));
+  var acetqua2017 = Math.round((qua[0].total)/(qua[0].count));
+  var acoequa2017 = Math.round((qua[2].total)/(qua[2].count));
+  //2018
+  var aecqua2018 = Math.round((qua[5].total)/(qua[5].count));
+  var acetqua2018 = Math.round((qua[1].total)/(qua[1].count));
+  var acoequa2018 = Math.round((qua[3].total)/(qua[3].count));
+  //English
+  res.locals.aeceng2017 = aeceng2017; 
+  res.locals.aeceng2018 = aeceng2018; 
+  res.locals.aceteng2017 = aceteng2017;
+  res.locals.aceteng2018 = aceteng2018;
+  res.locals.acoeeng2017 = acoeeng2017;
+  res.locals.acoeeng2018 = acoeeng2018;
+  //Quantitative
+  res.locals.aecqua2017 = aecqua2017; 
+  res.locals.aecqua2018 = aecqua2018; 
+  res.locals.acetqua2017 = acetqua2017;
+  res.locals.acetqua2018 = acetqua2018;
+  res.locals.acoequa2017 = acoequa2017;
+  res.locals.acoequa2018 = acoequa2018;
+  res.render('moduleyear');
+});
+});
+});
 module.exports = router;
 

@@ -5,128 +5,163 @@ html
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     // Bootstrap core CSS
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
-    link(href='stylesheets/bpie.css', rel='stylesheet')
-    script(src='javascripts/bpie.js')
+    link(href='stylesheets/bootstrap.css', rel='stylesheet')
+    link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+    script(src='javascripts/jquery.min.js')
+    script(src='javascripts/bootstrap.min.js')
+    // Custom styles for this template
+    link(href='stylesheets/style1.css', rel='stylesheet')
+    link(href='stylesheets/style-responsive.css', rel='stylesheet')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     style.
-     #chartdiv {
-     width: 100%;
-     height: 500px;
-     }
+      body {
+      background-color:#2C3E50;
+      }
+      header {
+      background-color: #2C3E50;
+      border-bottom: 1px solid #fd9f1b;
+      }
+      h3{
+      font-size:18px;
+      }
+      .navbar h2 {
+      color:#fd9f1b;
+      }
+      .user {
+      font-family:;
+      }
+      .row{
+      offset:0px;
+      }
+      .row a {
+      text-decoration: none;
+      color: black;
+      }
+      .panel-box {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      border: medium none;
+      }
+      .panel-box .panel-icon {
+      display: table-cell;
+      padding: 15px;
+      width: 1%;
+      vertical-align: top;
+      border-radius: 0px;
+      text-align: center;
+      /*border-bottom: 1px solid #fcfcfc;
+      border-top: 1px solid #fcfcfc;
+      border-right: 1px solid #fcfcfc;*/
+      }
+      .dashboard-stats .stat-icon {
+      line-height: 65px;
+      }
+      .bg-success {
+      background-color: #A3C86D !important;
+      color: #FFF !important;
+      }
+      .success-text {
+      color: #82b33a;
+      }
+      .bg-danger {
+      background-color: #FF7857 !important;
+      color: #FFF !important;
+      }
+      .danger-text {
+      color: #d15b3d;
+      }
+      .bg-lovender {
+      background-color: #8075C4 !important;
+      color: #FFF !important;
+      }
+      .lovender-text {
+      color: #6a5fb1;
+      }
+      .bg-info {
+      background-color: #7ACBEE !important;
+      color: #FFF !important;
+      }
+      .info-text {
+      color: #3ca0cb;
+      }
+      .size-h1 {
+      margin-left:-10px;
+      margin-top:0px;
+      font-size: 14px;
+      }
+      .panel-icon p.text {
+      font-weight: bold;
+      margin-top: 16px !important;
+      font-size: 16px;
+      text-align: center;
+      }
+      .panel-icon i {
+      text-align: center;
+      }
+      .panel-icon i {
+      text-align: center;
+      }
+      .text-large {
+      font-size: 50px;
+      }
+      .img-circle {
+      width:150px;
+      height:150px;
+      margin-top:0px;
+      border:6px solid lightgrey;
+      }
+      .glyphicon, .fa {
+      font-size: 50px;
+      }
+      .glyphicon-off {
+      font-size: 20px;
+      }
+      .panel:hover {
+      transform: scale(1.2);
+      transition-duration: 0.3s;
+      }
+      .header .top-menu ul li a {
+      background-color: #2C3E50;
+      border: 1px solid #2C3E50;
+      }
+      .header .top-menu ul li {
+      border-color: 1px solid #2C3E50;
+      }
   body
-    center
-                    button.btn#getdata(type='button', name='getdata',style='margin-top: 40px !important; background-color:#B83E44; color:#fff')
-                      i.fa.fa-get-pocket.fw.fa-lg
-                      |  Colleges year wise
-                    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    button.btn(type='button',style='margin-top: 40px !important; background-color:#B83E44; color:#fff',onclick="javascript:window.location.reload();")
-                      i.fa.fa-repeat.fw.fa-lg
-                      |  Colleges overall modules
-                    .checkbox
-                          label(style='font-size: 15px')
-                            input(name='test', type='checkbox', value='test1')
-                            span.cr
-                              i.cr-icon.fa.fa-check
-                            | Test1
-                            br
-                          label(style='font-size: 15px')
-                            input(name='test', type='checkbox',value='test2')
-                            span.cr
-                              i.cr-icon.fa.fa-check
-                            | Test2
-    .wrapper
-      h1 Year Wise Comparision
-      row
-        #chartdiv
-    // Resources
-  script(src='https://www.amcharts.com/lib/4/core.js')
-  script(src='https://www.amcharts.com/lib/4/charts.js')
-  script(src='https://www.amcharts.com/lib/4/themes/animated.js')
-  // Chart code
-  script.
-    // Themes begin
-    am4core.useTheme(am4themes_animated);
-    // Themes end
-    var chart = am4core.create("chartdiv", am4charts.XYChart);
-    chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-    chart.data = [
-    {
-    category: "AEC",
-    value1: 1,
-    value2: 5
-    },
-    {
-    category: "ACET",
-    value1: 2,
-    value2: 5
-    },
-    {
-    category: "ACOE",
-    value1: 3,
-    value2: 5
-    }
-    ];
-    chart.colors.step = 2;
-    chart.padding(30, 30, 10, 30);
-    chart.legend = new am4charts.Legend();
-    var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-    categoryAxis.dataFields.category = "category";
-    categoryAxis.renderer.grid.template.location = 0;
-    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-    valueAxis.min = 0;
-    valueAxis.max = 100;
-    valueAxis.strictMinMax = true;
-    valueAxis.calculateTotals = true;
-    valueAxis.renderer.minWidth = 50;
-    var series1 = chart.series.push(new am4charts.ColumnSeries());
-    series1.columns.template.width = am4core.percent(80);
-    series1.columns.template.tooltipText =
-    "{name}: {valueY.totalPercent.formatNumber('#.00')}%";
-    series1.name = "ACE";
-    series1.dataFields.categoryX = "category";
-    series1.dataFields.valueY = "value1";
-    series1.dataFields.valueYShow = "totalPercent";
-    series1.dataItems.template.locations.categoryX = 0.5;
-    series1.stacked = true;
-    series1.tooltip.pointerOrientation = "vertical";
-    var bullet1 = series1.bullets.push(new am4charts.LabelBullet());
-    bullet1.interactionsEnabled = false;
-    bullet1.label.text = "{valueY.totalPercent.formatNumber('#.00')}%";
-    bullet1.label.fill = am4core.color("#ffffff");
-    bullet1.locationY = 0.5;
-    var series2 = chart.series.push(new am4charts.ColumnSeries());
-    series2.columns.template.width = am4core.percent(80);
-    series2.columns.template.tooltipText =
-    "{name}: {valueY.totalPercent.formatNumber('#.00')}%";
-    series2.name = "ACET";
-    series2.dataFields.categoryX = "category";
-    series2.dataFields.valueY = "value2";
-    series2.dataFields.valueYShow = "totalPercent";
-    series2.dataItems.template.locations.categoryX = 0.5;
-    series2.stacked = true;
-    series2.tooltip.pointerOrientation = "vertical";
-    var bullet2 = series2.bullets.push(new am4charts.LabelBullet());
-    bullet2.interactionsEnabled = false;
-    bullet2.label.text = "{valueY.totalPercent.formatNumber('#.00')}%";
-    bullet2.locationY = 0.5;
-    bullet2.label.fill = am4core.color("#ffffff");
-    var series3 = chart.series.push(new am4charts.ColumnSeries());
-    series3.columns.template.width = am4core.percent(80);
-    series3.columns.template.tooltipText =
-    "{name}: {valueY.totalPercent.formatNumber('#.00')}%";
-    series3.name = "ACOE";
-    series3.dataFields.categoryX = "category";
-    series3.dataFields.valueY = "value3";
-    series3.dataFields.valueYShow = "totalPercent";
-    series3.dataItems.template.locations.categoryX = 0.5;
-    series3.stacked = true;
-    series3.tooltip.pointerOrientation = "vertical";
-    var bullet3 = series3.bullets.push(new am4charts.LabelBullet());
-    bullet3.interactionsEnabled = false;
-    bullet3.label.text = "{valueY.totalPercent.formatNumber('#.00')}%";
-    bullet3.locationY = 0.5;
-    bullet3.label.fill = am4core.color("#ffffff");
-    chart.scrollbarX = new am4core.Scrollbar();
-  // HTML
+    // header start
+    header.header
+      // logo start
+      a.logo(href='#')
+        img(src='images/cocubes.png',style='height:55px;width:100px;margin-top:-13px')
+      // logo end
+    // CONTENT
+    div.container-fluid
+      .col-md-12.col-sm-12.text-center(style="color: #fff; margin: 100px 0 0 0; ")
+        center
+          img.img-circle.img-responsive.img-center(src="images/modified.png" alt='user' height="30", width="30")
+        h3
+          p Cocubes Analysis
+        br
+        br
+
+    div.container
+      .row.dashboard-stats.container
+        .col-md-3.col-sm-6.col-md-offset-3
+          a(href='/cy')
+            section.panel.panel-box
+              .panel-left.panel-icon.bg-primary
+                i.fa.fa-university
+              .panel-right.panel-icon.bg-reverse
+                p.text-muted.no-margin.text
+                  span  Colleges
+        .col-md-3.col-sm-6.col-md
+          a(href='/my')
+            section.panel.panel-box
+              .panel-left.panel-icon.bg-info
+                i.fa.fa-list
+              .panel-right.panel-icon.bg-reverse
+                p.text-muted.no-margin.text
+                  span  Modules

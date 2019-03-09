@@ -1,19 +1,16 @@
 doctype html
 html
   head
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
-    link(href='https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css', rel='stylesheet')
-    link(href='https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css', rel='stylesheet')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+    script(src='javascripts/jquery.min.js')
+    script(src='javascripts/bootstrap.min.js')
     link(href='stylesheets/studentpie.css', rel='stylesheet')
     script(src='javascripts/studentpie.js')
-    //charts
-    style.
-      #chartdiv {
-      width: 100%;
-      height: 500px;
-      }
+    link(href='https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css', rel='stylesheet')
+    link(href='https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css', rel='stylesheet')
+    link(href='stylesheets/font-awesome/css/font-awesome.min.css', rel='stylesheet')
     style.
       .click{
       display:none;
@@ -35,7 +32,7 @@ html
           br
           br
           |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          input.btn.btn-info.submit.get(type='button', value='submit', nme='submit')
+          input.btn.btn-info.submit.get(type='button', value='submit', name='submit', align='')
           br
           br
     br
@@ -45,55 +42,50 @@ html
         br
         br
         .table-responsive
-          table.example.display.table-bordered
+          table.example.display.table-bordered(style='1px solid black', width='100%')
             thead
               tr
                 th English
                 th Quantitative
                 th Analytical
                 th Domain
-                th Written English
                 th Coding
+                th Written English
                 th Total Score
             tbody
               tr
-                td#english
-                td#quantitative
-                td#analytical
-                td#domain
-                td#written
-                td#coding
-                td#score
+                td.english
+                td.quantitative
+                td.analytical
+                td.domain
+                td.coding
+                td.written
+                td.score
       br
       br
-      .container(style='color:#000; background-color:#fff')
-        .wrapper
-          row
-            .col-md-3
-              .pie-charts
-                .pieID--student.pie-chart--wrapper
-                  h2 Student Score
-                  .pie-chart
-                    .pie-chart__pie
-                    ul.pie-chart__legend
-                      li
-                        em English
-                        span#english1
-                      li
-                        em Quantitative
-                        span#quantitative1
-                      li
-                        em Analytical
-                        span#analytical1
-                      li
-                        em Domain
-                        span#domain1
-                      li
-                        em Coding
-                        span#written1
-                      li
-                        em Written English
-                        span#coding1
+      main
+        h1 Student Details
+        section
+          .pieID.pie
+          ul.pieID.legend
+            li
+              em English
+              span.english
+            li
+              em Quant
+              span.quantitative
+            li
+              em Analytical
+              span.analytical
+            li
+              em Domain
+              span.domain
+            li
+              em Coding
+              span.coding
+            li
+              em Written
+              span.written
     script(src='https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js')
     script(src='https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js')
     script(src='https://cdn.datatables.net/buttons/1.5.2/js/buttons.flash.min.js')
@@ -102,6 +94,7 @@ html
     script(src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js')
     script(src='https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js')
     script(src='https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js')
+    script(src='javascripts/cocubes.js')
     script.
       $(document).ready(function() {
         $('.example').DataTable( {
@@ -110,47 +103,4 @@ html
               { extend:'copy', attr: { id: 'allan' } }, 'csv', 'excel', 'pdf', 'print'
           ]
         });
-      });
-    script.
-      $('.get').click(function(){
-        var id = $('.rollno').val();
-        $.post('/getgraph',{num:id}, function(data, jqXHR){
-          //alert(data);
-          var json = JSON.stringify(data);
-          //alert(json);
-          var parse = JSON.parse(json);
-          //alert(parse);
-          var score = parse[0].Score;
-          //alert(score);
-          var english = parse[0].English;
-          var quantitative = parse[0].Quantitative;
-          var analytical = parse[0].Analytical;
-          var domain = parse[0].Domain;
-          var computer = parse[0].ComputerFundamental;
-          var coding = parse[0].Coding;
-          var written = parse[0].WrittenEnglish;
-          var english1 = parse[0].English;
-          var quantitative1 = parse[0].Quantitative;
-          var analytical1 = parse[0].Analytical;
-          var domain1 = parse[0].Domain;
-          var computer1 = parse[0].ComputerFundamental;
-          var coding1 = parse[0].Coding;
-          var written1 = parse[0].WrittenEnglish;
-          $('#score').html(score);
-          $('#english').html(english);
-          $('#quantitative').html(quantitative);
-          $('#analytical').html(analytical);
-          $('#domain').html(domain);
-          $('#computer').html(computer);
-          $('#coding').html(coding);
-          $('#written').html(written);
-          $('#english1').html(english1);
-          $('#quantitative1').html(quantitative1);
-          $('#analytical1').html(analytical1);
-          $('#domain1').html(domain1);
-          $('#computer1').html(computer1);
-          $('#coding1').html(coding1);
-          $('#written1').html(written1);
-        $('.click').show();
-      });
       });

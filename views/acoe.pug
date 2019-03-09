@@ -5,17 +5,17 @@ html
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     // Bootstrap core CSS
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
-    link(href='stylesheets/bpie.css', rel='stylesheet')
-    script(src='javascripts/bpie.js')
+    link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+    script(src='javascripts/acetjquery.min.js')
+    script(src='javascripts/bootstrap.min.js')
+    link(href='stylesheets/acoepie.css', rel='stylesheet')
+    script(src='javascripts/acoepie.js')
     link(href='https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css', rel='stylesheet')
     link(href='https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css', rel='stylesheet')
     link(href='stylesheets/style.css', rel='stylesheet')
     link(href='stylesheets/style1.css', rel='stylesheet')
     link(href='stylesheets/graph.css', rel='stylesheet')
-    link(href='stylesheets/font-awesome/css/font-awesome.min.css', rel='stylesheet')
+    //link(href='stylesheets/font-awesome/css/font-awesome.min.css', rel='stylesheet')
     //- //if lt IE 9
     //- script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
     //- script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
@@ -89,538 +89,6 @@ html
 
   body
     .wrapper
-      h1 3 colleges Department Wise Comparision
-      row
-        .col-md-4
-          .pie-charts
-
-            .pieID--aecbranches.pie-chart--wrapper
-              h2 AEC
-              .pie-chart
-                .pie-chart__pie
-                ul.pie-chart__legend
-                  li
-                    em CSE
-                    span #{aeccse}
-                  li
-                    em IT
-                    span #{aecit}
-                  li
-                    em ECE
-                    span #{aecece}
-                  li
-                    em EEE
-                    span #{aeceee}
-                  li
-                    em CIVIL
-                    span #{aeccivil}
-                  li
-                    em MECH
-                    span #{aecmech}
-                  li
-                    em PT
-                    span #{aecpt}
-        .col-md-4
-          .pieID--acetbranches.pie-chart--wrapper
-            h2 ACET
-            .pie-chart
-              .pie-chart__pie
-              ul.pie-chart__legend
-                li
-                  em CSE
-                  span #{acetcse}
-                li
-                  em IT
-                  span #{acetit}
-                li
-                  em ECE
-                  span #{acetece}
-                li
-                  em EEE
-                  span #{aceteee}
-                li
-                  em CIVIL
-                  span #{acetcivil}
-                li
-                  em MECH
-                  span #{acetmech}
-
-        .col-md-4
-          .pieID--acoebranches.pie-chart--wrapper
-            h2 ACOE
-            .pie-chart
-              .pie-chart__pie
-              ul.pie-chart__legend
-                li
-                  em CSE
-                  span #{acoecse}
-                li
-                  em ECE
-                  span #{acoeece}
-                li
-                  em EEE
-                  span #{acoeeee}
-                li
-                  em CIVIL
-                  span #{acoecivil}
-                li
-                  em MECH
-                  span #{acoemech}
-                li
-                  em PT
-                  span #{acoept}
- 
-    .wrapper
-      h1 AEC Department Wise Comparision
-      row
-        .col-md-3
-          .pie-charts
-
-            .pieID--aeccse.pie-chart--wrapper
-              h2 CSE
-              .pie-chart
-                .pie-chart__pie
-                ul.pie-chart__legend
-                  li
-                    em English
-                    span #{aeccseeng}
-                  li
-                    em Quantitative
-                    span #{aeccsequant}
-                  li
-                    em Analytical
-                    span #{aeccseanaly}
-                  li
-                    em Domain
-                    span #{aeccsedomain}
-                  li
-                    em Computer fundamentals
-                    span #{aeccsecompf}
-                  li
-                    em Coding
-                    span #{aeccsecod}
-                  li
-                    em Written English
-                    span #{aeccsewet}
-
-
-
-
-        .col-md-3
-          .pieID--aecece.pie-chart--wrapper
-            h2 ECE
-            .pie-chart
-              .pie-chart__pie
-              ul.pie-chart__legend
-                li
-                  em English
-                  span #{aececeeng}
-                li
-                  em Quantitative
-                  span #{aececequant}
-                li
-                  em Analytical
-                  span #{aececeanaly}
-                li
-                  em Domain
-                  span #{aececedomain}
-                li
-                  em Computer fundamentals
-                  span #{aecececompf}
-                li
-                  em Coding
-                  span #{aecececod}
-                li
-                  em Written English
-                  span #{aececewet}
-
-        .col-md-3
-          .pieID--aeceee.pie-chart--wrapper
-            h2 EEE
-            .pie-chart
-              .pie-chart__pie
-              ul.pie-chart__legend
-                li
-                  em English
-                  span #{aeceeeeng}
-                li
-                  em Quantitative
-                  span #{aeceeequant}
-                li
-                  em Analytical
-                  span #{aeceeeanaly}
-                li
-                  em Domain
-                  span #{aeceeedomain}
-                li
-                  em Computer Fundamentals
-                  span #{aeceeecompf}
-                li
-                  em Coding
-                  span #{aeceeecod}
-                li
-                  em Written English
-                  span #{aeceeewet}
-
-        .col-md-3
-          .pieID--aecce.pie-chart--wrapper
-            h2 CE
-            .pie-chart
-              .pie-chart__pie
-              ul.pie-chart__legend
-                li
-                  em English
-                  span #{aeccivileng}
-                li
-                  em Quantitative
-                  span #{aeccivilquant}
-                li
-                  em Analytical
-                  span #{aeccivilanaly}
-                li
-                  em Domain
-                  span #{aeccivildomain}
-                li
-                  em Computer Fundamentals
-                  span #{aeccivilcompf}
-                li
-                  em Coding
-                  span #{aeccivilcod}
-                li
-                  em Written English
-                  span #{aeccivilwet}
-
-      row
-        .col-md-3
-          .pie-charts
-
-            .pieID--aecit.pie-chart--wrapper
-              h2 IT
-              .pie-chart
-                .pie-chart__pie
-                ul.pie-chart__legend
-                  li
-                    em English
-                    span #{aeciteng}
-                  li
-                    em Quantitative
-                    span #{aecitquant}
-                  li
-                    em Analytical
-                    span #{aecitanaly}
-                  li
-                    em Domain
-                    span #{aecitdomain}
-                  li
-                    em Computer Fundamentals
-                    span #{aecitcompf}
-                  li
-                    em Coding
-                    span #{aecitcod}
-                  li
-                    em Written English
-                    span #{aecitwet}
-
-
-
-
-        .col-md-3
-          .pieID--aecme.pie-chart--wrapper
-            h2 ME
-            .pie-chart
-              .pie-chart__pie
-              ul.pie-chart__legend
-                li
-                  em English
-                  span #{aecmecheng}
-                li
-                  em Quantitative
-                  span #{aecmechquant}
-                li
-                  em Analytical
-                  span #{aecmechanaly}
-                li
-                  em Domain
-                  span #{aecmechdomain}
-                li
-                  em Computer Fundamentals
-                  span #{aecmechcompf}
-                li
-                  em Coding
-                  span #{aecmechcod}
-                li
-                  em Written English
-                  span #{aecmechwet}
-
-        .col-md-3
-          .pieID--aecpt.pie-chart--wrapper
-            h2 PT
-            .pie-chart
-              .pie-chart__pie
-              ul.pie-chart__legend
-                li
-                  em English
-                  span #{aecpteng}
-                li
-                  em Quantitative
-                  span #{aecptquant}
-                li
-                  em Analytical
-                  span #{aecptanaly}
-                li
-                  em Domain
-                  span #{aecptdomain}
-                li
-                  em Computer Fundamentals
-                  span #{aecptcompf}
-                li
-                  em Coding
-                  span #{aecptcod}
-                li
-                  em Written English
-                  span #{aecptwet}
-
-        .col-md-3
-          .pieID--aecage.pie-chart--wrapper
-            h2 AgE
-            .pie-chart
-              .pie-chart__pie
-              ul.pie-chart__legend
-                li
-                  em English
-                  span #{aecagrieng}
-                li
-                  em Quantitative
-                  span #{aecagriquant}
-                li
-                  em Analytical
-                  span #{aecagrianaly}
-                li
-                  em Domain
-                  span #{aecagridomain}
-                li
-                  em Computer Fundamentals
-                  span #{aecagricompf}
-                li
-                  em Coding
-                  span #{aecagricod}
-                li
-                  em Written English
-                  span #{aecagriwet}
-    .wrapper
-      h1 ACET Department Wise Comparision
-      row
-        .col-md-3
-          .pie-charts
-
-            .pieID--acetcse.pie-chart--wrapper
-              h2 CSE
-              .pie-chart
-                .pie-chart__pie
-                ul.pie-chart__legend
-
-                  li
-                    em English
-                    span #{acetcseeng}
-                  li
-                    em Quantitative
-                    span #{acetcsequant}
-                  li
-                    em Analytical
-                    span #{acetcseeng}
-                  li
-                    em Domain
-                    span #{acetcsedomain}
-                  li
-                    em Computer Fundamentals
-                    span #{acetcsecompf}
-                  li
-                    em Coding
-                    span #{acetcsecod}
-                  li
-                    em Written English
-                    span #{acetcsewet}
-
-
-
-
-        .col-md-3
-          .pieID--acetece.pie-chart--wrapper
-            h2 ECE
-            .pie-chart
-              .pie-chart__pie
-              ul.pie-chart__legend
-                li
-                  em English
-                  span #{aceteceeng}
-                li
-                  em Quantitative
-                  span #{acetecequant}
-                li
-                  em Analytical
-                  span #{aceteceanaly}
-                li
-                  em Domain
-                  span #{acetecedomain}
-                li
-                  em Computer Fundamentals
-                  span #{acetececompf}
-                li
-                  em Coding
-                  span #{acetececod}
-                li
-                  em Written English
-                  span #{acetecewet}
-
-        .col-md-3
-          .pieID--aceteee.pie-chart--wrapper
-            h2 EEE
-            .pie-chart
-              .pie-chart__pie
-              ul.pie-chart__legend
-                li
-                  em English
-                  span #{aceteeeeng}
-                li
-                  em Quantitative
-                  span #{aceteeequant}
-                li
-                  em Analytical
-                  span #{aceteeeanaly}
-                li
-                  em Domain
-                  span #{aceteeedomain}
-                li
-                  em Computer Fundamentals
-                  span #{aceteeecompf}
-                li
-                  em Coding
-                  span #{aceteeecod}
-                li
-                  em Written English
-                  span #{aceteeewet}
-
-        .col-md-3
-          .pieID--acetce.pie-chart--wrapper
-            h2 CE
-            .pie-chart
-              .pie-chart__pie
-              ul.pie-chart__legend
-                li
-                  em English
-                  span #{acetcivileng}
-                li
-                  em Quantitative
-                  span #{acetcivilquant}
-                li
-                  em Analytical
-                  span #{acetcivilanaly}
-                li
-                  em Domain
-                  span #{acetcivildomain}
-                li
-                  em Computer Fundamentals
-                  span #{acetcivilcompf}
-                li
-                  em Coding
-                  span #{acetcivilcod}
-                li
-                  em Written English
-                  span #{acetcivilwet}
-
-      row
-        .col-md-3
-          .pie-charts
-
-            .pieID--acetit.pie-chart--wrapper
-              h2 IT
-              .pie-chart
-                .pie-chart__pie
-                ul.pie-chart__legend
-
-                  li
-                    em English
-                    span #{acetiteng}
-                  li
-                    em Quantitative
-                    span #{acetitquant}
-                  li
-                    em Analytical
-                    span #{acetitanaly}
-                  li
-                    em Domain
-                    span #{acetitdomain}
-                  li
-                    em Computer Fundamentals
-                    span #{acetitcompf}
-                  li
-                    em Coding
-                    span #{acetitcod}
-                  li
-                    em Written English
-                    span #{acetitwet}
-
-
-
-
-        .col-md-3
-          .pieID--acetme.pie-chart--wrapper
-            h2 ME
-            .pie-chart
-              .pie-chart__pie
-              ul.pie-chart__legend
-                li
-                  em English
-                  span #{acetmecheng}
-                li
-                  em Quantitative
-                  span #{acetmechquant}
-                li
-                  em Analytical
-                  span #{acetmechanaly}
-                li
-                  em Domain
-                  span #{acetmechdomain}
-                li
-                  em Computer Fundamentals
-                  span #{acetmechcompf}
-                li
-                  em Coding
-                  span #{acetmechcod}
-                li
-                  em Written English
-                  span #{acetmechwet}
-
-        .col-md-3
-          .pieID--acetpt.pie-chart--wrapper
-            h2 PT
-            .pie-chart
-              .pie-chart__pie
-              ul.pie-chart__legend
-                li
-                  em English
-                  span #{acetpteng}
-                li
-                  em Quantitative
-                  span #{acetptquant}
-                li
-                  em Analytical
-                  span #{acetptanaly}
-                li
-                  em Domain
-                  span #{acetptdomain}
-                li
-                  em Computer Fundamentals
-                  span #{acetptcompf}
-                li
-                  em Coding
-                  span #{acetptcod}
-                li
-                  em Written English
-                  span #{acetptwet}
-
-       
-    .wrapper
       h1 ACOE Department Wise Comparision
       row
         .col-md-3
@@ -637,16 +105,13 @@ html
                     span #{acoecseeng}
                   li
                     em Quantitative
-                    span #{acoecseauant}
+                    span #{acoecsequant}
                   li
                     em Analytical
                     span #{acoecseanaly}
                   li
                     em Domain
                     span #{acoecsedomain}
-                  li
-                    em Computer Fundamentals
-                    span #{acoecsecompf}
                   li
                     em Coding
                     span #{acoecsecod}
@@ -676,9 +141,6 @@ html
                   em Domain
                   span #{acoeecedomain}
                 li
-                  em Computer Fundamentals
-                  span #{acoeececompf}
-                li
                   em Coding
                   span #{acoeececod}
                 li
@@ -703,9 +165,6 @@ html
                 li
                   em Domain
                   span #{acoeeeedomain}
-                li
-                  em Computer Fundamentals
-                  span #{acoeeeecompf}
                 li
                   em Coding
                   span #{acoeeeecod}
@@ -732,50 +191,11 @@ html
                   em Domain
                   span #{acoecivildomain}
                 li
-                  em Computer Fundamentals
-                  span #{acoecivilcompf}
-                li
                   em Coding
                   span #{acoecivilcod}
                 li
                   em Written English
                   span #{acoecivilwet}
-
-      row
-        .col-md-3
-          .pie-charts
-
-            .pieID--acoeit.pie-chart--wrapper
-              h2 IT
-              .pie-chart
-                .pie-chart__pie
-                ul.pie-chart__legend
-
-                  li
-                    em English
-                    span #{acoeiteng}
-                  li
-                    em Quantitative
-                    span #{acoeitquant}
-                  li
-                    em Analytical
-                    span #{acoeitanaly}
-                  li
-                    em Domain
-                    span #{acoeitdomain}
-                  li
-                    em Computer Fundamentals
-                    span #{acoeitcompf}
-                  li
-                    em Coding
-                    span #{acoeitcod}
-                  li
-                    em Written English
-                    span #{acoeitwet}
-
-
-
-
         .col-md-3
           .pieID--acoeme.pie-chart--wrapper
             h2 ME
@@ -794,9 +214,6 @@ html
                 li
                   em Domain
                   span #{acoemechdomain}
-                li
-                  em Computer Fundamentals
-                  span #{acoemechcompf}
                 li
                   em Coding
                   span #{acoemechcod}
@@ -823,83 +240,9 @@ html
                   em Domain
                   span #{acoeptdomain}
                 li
-                  em Computer Fundamentals
-                  span #{acoeptcompf}
-                li
                   em Coding
                   span #{acoeptcod}
                 li
                   em Written English
                   span #{acoeptwet}
-    script.
-      function college_select_all(){
-      if (document.getElementById('all_colleges').checked) {
-      document.getElementById('aec').checked="true";
-      document.getElementById('acoe').checked="true";
-      document.getElementById('acet').checked="true";
-      }
-      else {
-      document.getElementById('aec').checked=false;
-      document.getElementById('acoe').checked=false;
-      document.getElementById('acet').checked=false;
-      }
-      }
-      
-      function college_selection_single() {
-      //alert('aklfjaksjfdk');
-      var i = document.getElementById('aec');
-      var j = document.getElementById('acoe');
-      var k = document.getElementById('acet');
-      if (i.checked==true && j.checked==true && k.checked==true) {
-      document.getElementById('all_colleges').checked=true;
-      }
-      else if (i.checked==false || j.checked==false || k.checked==false) {
-      document.getElementById('all_colleges').checked=false;
-      }
-      }
-
-      function courses_all_selection(){
-      if (document.getElementById('all_courses').checked) {
-      document.getElementById('civil').checked="true";
-      document.getElementById('eee').checked="true";      
-      document.getElementById('ece').checked="true";
-      document.getElementById('cse').checked="true";
-      document.getElementById('it').checked="true";
-      document.getElementById('me').checked="true";
-      document.getElementById('pt').checked="true";      
-      document.getElementById('mca').checked="true";
-      document.getElementById('agri').checked="true";
-      document.getElementById('min').checked="true";
-      }
-      else {
-      document.getElementById('civil').checked=false;
-      document.getElementById('eee').checked=false;      
-      document.getElementById('ece').checked=false;
-      document.getElementById('cse').checked=false;
-      document.getElementById('it').checked=false;
-      document.getElementById('me').checked=false;
-      document.getElementById('pt').checked=false;      
-      document.getElementById('mca').checked=false;
-      document.getElementById('agri').checked=false;
-      document.getElementById('min').checked=false;
-      }
-      }
-      
-      function course_single_selection() {
-      var a = document.getElementById('civil');
-      var b = document.getElementById('eee');      
-      var d = document.getElementById('ece');
-      var e = document.getElementById('cse');
-      var f = document.getElementById('it');
-      var g = document.getElementById('me');
-      var h = document.getElementById('pt');      
-      var j = document.getElementById('mca');
-      var k = document.getElementById('agri');
-      var l = document.getElementById('min');
-      if (a.checked==true && b.checked==true && d.checked==true && e.checked==true && f.checked==true && g.checked==true && h.checked==true && j.checked==true && k.checked==true && l.checked==true) {
-      document.getElementById('all_courses').checked=true;
-      }
-      else if (a.checked==false || b.checked==false || d.checked==false || e.checked==false || f.checked==false || g.checked==false || h.checked==false || j.checked==false || k.checked==false || l.checked==false) {
-      document.getElementById('all_courses').checked=false;
-      }
-      }
+    

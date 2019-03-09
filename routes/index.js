@@ -844,6 +844,7 @@ router.get('/cy', function(req, res) {
 });
 });
 router.get('/my', function(req, res) {
+  //AEC
   //English
   collection1.aggregate([{$group: {_id: {"College":"$College", "Batch":"$Batch"}, count : {$sum : 1}, total: {$sum: "$English"}}},{$sort:{"_id.College":1,"_id.Batch":1}}],function(err,eng){
   console.log(eng);
